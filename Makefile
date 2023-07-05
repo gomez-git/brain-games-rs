@@ -2,7 +2,7 @@ build:
 	@cargo build --release
 
 start:
-	@cargo run --release
+	@[[ -x ./target/release/brain_games ]] && ./target/release/brain_games
 
 format:
-	@rustfmt src/*
+	@rustfmt src/**/*
