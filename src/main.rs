@@ -1,5 +1,6 @@
-use std::io;
-use std::io::Write;
+use crate::cli::ask_question_and_get_answer;
+
+mod cli;
 
 fn main() {
     let username = greet_user_and_ask_name();
@@ -8,17 +9,7 @@ fn main() {
 fn greet_user_and_ask_name() -> String {
     println!("Welcome to the Brain Games!");
 
-    print!("May I have your name? ");
-
-    io::stdout().flush().unwrap();
-
-    let mut username = String::new();
-
-    io::stdin()
-        .read_line(&mut username)
-        .expect("Something bad has happened...");
-
-    let username = String::from(username.trim());
+    let username = ask_question_and_get_answer("May I have your name? ");
 
     println!("Hello, {username}!");
 
