@@ -1,17 +1,8 @@
-use crate::cli::ask_question_and_get_answer;
+use crate::user::User;
 
 mod cli;
+mod user;
 
 fn main() {
-    let username = greet_user_and_ask_name();
-}
-
-fn greet_user_and_ask_name() -> String {
-    println!("Welcome to the Brain Games!");
-
-    let username = ask_question_and_get_answer("May I have your name? ");
-
-    println!("Hello, {username}!");
-
-    username
+    let user = User::greet();
 }
