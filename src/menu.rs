@@ -1,5 +1,5 @@
 pub struct Menu {
-    buttons: [&'static str; 2],
+    buttons: [&'static str; 3],
 }
 
 impl Menu {
@@ -7,6 +7,7 @@ impl Menu {
         Self {
             buttons: [
                 "[f] Brain Even",
+                "[d] Brain Dice",
                 "[\u{23CE}] Exit",
             ],
         }
