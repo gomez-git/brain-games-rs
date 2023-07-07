@@ -2,6 +2,23 @@ pub fn check_evenness(num: u8) -> bool {
     num % 2 == 0
 }
 
+pub fn check_primeness(num: u8) -> bool {
+    if num == 1 {
+        return false;
+    }
+    let mut divider = 2;
+    let half = num / 2;
+
+    while divider <= half {
+        if num % divider == 0 {
+            return false;
+        }
+        divider += 1;
+    }
+
+    true
+}
+
 pub fn calculator(num1: i16, operator: u8, num2: i16) -> i16 {
     match operator as u8 {
         b'+' => num1 + num2,

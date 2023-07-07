@@ -3,6 +3,7 @@ use crate::games::brain_calculator::BrainCalculator;
 use crate::games::brain_dice::BrainDice;
 use crate::games::brain_even::BrainEven;
 use crate::games::brain_gcd::BrainGreatestCommonDivisor;
+use crate::games::brain_prime::BrainPrime;
 use crate::games::StartGame;
 use std::process;
 
@@ -30,6 +31,7 @@ impl User {
 
         match user_choice.as_str() {
             "f" => Box::new(BrainEven::new()),
+            "j" => Box::new(BrainPrime::new()),
             "d" => Box::new(BrainDice::new()),
             "k" => Box::new(BrainCalculator::new()),
             "s" => Box::new(BrainGreatestCommonDivisor::new()),
