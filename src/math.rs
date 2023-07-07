@@ -42,3 +42,27 @@ pub fn find_greatest_common_divisor(num1: u8, num2: u8) -> u8 {
 
     1
 }
+
+pub fn find_missing_number_in_progression(progression: Vec<u8>) -> u8 {
+    let missing_number_index = progression.iter().position(|&num| num == 0).unwrap();
+    let last_index = progression.len() - 1;
+
+    if missing_number_index == 0 || missing_number_index == last_index {
+        let second_number = progression[1];
+        let third_number = progression[2];
+        let step = third_number - second_number;
+
+        if missing_number_index == 0 {
+            second_number - step
+        } else {
+            progression[last_index - 1] + step
+        }
+    } else {
+        let first_number = progression[0];
+        let last_number = progression[last_index];
+        let quantity = progression.len();
+        let step = (last_number - first_number) / (quantity - 1) as u8;
+
+        progression[missing_number_index - 1] + step
+    }
+}

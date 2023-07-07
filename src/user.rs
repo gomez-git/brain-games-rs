@@ -4,6 +4,7 @@ use crate::games::brain_dice::BrainDice;
 use crate::games::brain_even::BrainEven;
 use crate::games::brain_gcd::BrainGreatestCommonDivisor;
 use crate::games::brain_prime::BrainPrime;
+use crate::games::brain_progression::BrainProgression;
 use crate::games::StartGame;
 use std::process;
 
@@ -35,6 +36,7 @@ impl User {
             "d" => Box::new(BrainDice::new()),
             "k" => Box::new(BrainCalculator::new()),
             "s" => Box::new(BrainGreatestCommonDivisor::new()),
+            "l" => Box::new(BrainProgression::new()),
             _ => {
                 self.say_bye();
                 process::exit(0);

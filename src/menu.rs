@@ -1,5 +1,5 @@
 pub struct Menu {
-    buttons: [&'static str; 6],
+    buttons: [&'static str; 7],
 }
 
 impl Menu {
@@ -11,6 +11,7 @@ impl Menu {
                 "[d] Brain Dice",
                 "[k] Brain Calculator",
                 "[s] Brain Greatest Common Divisor",
+                "[l] Brain Progression",
                 "[\u{23CE}] Exit",
             ],
         }

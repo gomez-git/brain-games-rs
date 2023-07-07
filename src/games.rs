@@ -6,6 +6,7 @@ pub mod brain_dice;
 pub mod brain_even;
 pub mod brain_gcd;
 pub mod brain_prime;
+pub mod brain_progression;
 
 pub trait StartGame {
     fn task(&self) -> &str;
