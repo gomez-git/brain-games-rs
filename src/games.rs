@@ -1,6 +1,7 @@
 use super::cli::ask_question_and_get_answer;
 use rand::Rng;
 
+pub mod brain_calculator;
 pub mod brain_dice;
 pub mod brain_even;
 

@@ -1,4 +1,5 @@
 use super::cli::ask_question_and_get_answer;
+use crate::games::brain_calculator::BrainCalculator;
 use crate::games::brain_dice::BrainDice;
 use crate::games::brain_even::BrainEven;
 use crate::games::StartGame;
@@ -29,6 +30,7 @@ impl User {
         match user_choice.as_str() {
             "f" => Box::new(BrainEven::new()),
             "d" => Box::new(BrainDice::new()),
+            "k" => Box::new(BrainCalculator::new()),
             _ => {
                 self.say_bye();
                 process::exit(0);
