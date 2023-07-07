@@ -2,6 +2,7 @@ use super::cli::ask_question_and_get_answer;
 use crate::games::brain_calculator::BrainCalculator;
 use crate::games::brain_dice::BrainDice;
 use crate::games::brain_even::BrainEven;
+use crate::games::brain_gcd::BrainGreatestCommonDivisor;
 use crate::games::StartGame;
 use std::process;
 
@@ -31,6 +32,7 @@ impl User {
             "f" => Box::new(BrainEven::new()),
             "d" => Box::new(BrainDice::new()),
             "k" => Box::new(BrainCalculator::new()),
+            "s" => Box::new(BrainGreatestCommonDivisor::new()),
             _ => {
                 self.say_bye();
                 process::exit(0);

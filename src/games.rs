@@ -4,6 +4,7 @@ use rand::Rng;
 pub mod brain_calculator;
 pub mod brain_dice;
 pub mod brain_even;
+pub mod brain_gcd;
 
 pub trait StartGame {
     fn task(&self) -> &str;
