@@ -1,8 +1,8 @@
-build:
-	@cargo build --release
+install:
+	@cargo install --path .
 
-start:
-	@[[ -x ./target/release/brain_games ]] && ./target/release/brain_games
+uninstall:
+	@cargo uninstall
 
 format:
-	@rustfmt src/**/*
+	@cargo fmt
