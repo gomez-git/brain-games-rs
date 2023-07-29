@@ -30,7 +30,7 @@ impl StartGame for BrainCalculator {
         vec![num1, operator, num2]
     }
 
-    fn question(&self, args: &Vec<u8>) -> String {
+    fn question(&self, args: &[u8]) -> String {
         let binding = [args[1]];
         let operator = str::from_utf8(&binding).unwrap();
 

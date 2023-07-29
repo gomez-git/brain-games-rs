@@ -18,7 +18,7 @@ impl StartGame for BrainDice {
         self.task
     }
 
-    fn question(&self, _: &Vec<u8>) -> String {
+    fn question(&self, _: &[u8]) -> String {
         "*".to_string()
     }
 

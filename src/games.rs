@@ -12,14 +12,14 @@ pub trait StartGame {
     fn task(&self) -> &str;
 
     fn get_random_number(&self, start: u8, end: u8) -> u8 {
-        rand::thread_rng().gen_range(start..=end) as u8
+        rand::thread_rng().gen_range(start..=end)
     }
 
     fn get_args(&self) -> Vec<u8> {
         vec![self.get_random_number(1, 100)]
     }
 
-    fn question(&self, args: &Vec<u8>) -> String {
+    fn question(&self, args: &[u8]) -> String {
         args.iter()
             .map(|elm| elm.to_string())
             .collect::<Vec<String>>()

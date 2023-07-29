@@ -44,7 +44,7 @@ impl StartGame for BrainProgression {
         progression
     }
 
-    fn question(&self, args: &Vec<u8>) -> String {
+    fn question(&self, args: &[u8]) -> String {
         args.iter()
             .map(|&num| match num {
                 0 => "..".to_string(),
