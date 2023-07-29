@@ -1,5 +1,5 @@
-use super::super::math::find_missing_number_in_progression;
 use super::StartGame;
+use crate::math::find_missing_number_in_progression;
 
 pub struct BrainProgression {
     task: &'static str,

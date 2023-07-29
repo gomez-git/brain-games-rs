@@ -1,5 +1,5 @@
-use super::super::math::calculator;
 use super::StartGame;
+use crate::math::calculator;
 use std::str;
 
 const OPERATORS: [u8; 4] = [b'+', b'-', b'*', b'%'];

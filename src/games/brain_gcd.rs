@@ -1,5 +1,5 @@
-use super::super::math::find_greatest_common_divisor;
 use super::StartGame;
+use crate::math::find_greatest_common_divisor;
 
 pub struct BrainGreatestCommonDivisor {
     task: &'static str,

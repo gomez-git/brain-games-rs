@@ -1,5 +1,5 @@
-use super::super::math::check_primeness;
 use super::StartGame;
+use crate::math::check_primeness;
 
 pub struct BrainPrime {
     task: &'static str,

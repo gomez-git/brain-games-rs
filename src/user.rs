@@ -1,4 +1,4 @@
-use super::cli::ask_question_and_get_answer;
+use crate::cli::ask_question_and_get_answer;
 use crate::games::brain_calculator::BrainCalculator;
 use crate::games::brain_dice::BrainDice;
 use crate::games::brain_even::BrainEven;

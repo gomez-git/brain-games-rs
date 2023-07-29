@@ -1,5 +1,5 @@
-use super::super::math::check_evenness;
 use super::StartGame;
+use crate::math::check_evenness;
 
 pub struct BrainEven {
     task: &'static str,
